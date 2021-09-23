@@ -21,9 +21,14 @@ Stampare Nome, Cognome e la media dei voti di ogni alunno.
         return $result;
     }
 
-    $random = average($students[0]);
  ?>
 
- <?php
-    echo $random;
-?>
+<ul>
+    <?php foreach ($students as $student)  { ?>
+
+        <?php $average = average($student); ?>
+    
+        <li><?=$student['nome']?> <?=$student['cognome']?> Media : <?=$average?></li>
+
+    <?php } ?>
+</ul>
